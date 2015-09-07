@@ -2,7 +2,10 @@
 layout: page
 title: 归档
 comments: false
+permalink: /archive/
+icon: glyphicon-list
 ---
+
 
 {% for post in site.posts  %}
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
