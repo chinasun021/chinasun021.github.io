@@ -106,7 +106,7 @@ description: ""
 ## 0x05 如何编写文章
 我使用的编写文章的工具：sublime text 2+Markdown Preview插件。
 
-###安装Markdown Preview插件
+### 安装Markdown Preview插件
 1.【Ctrl+Shift+P】，输入pic
 
 2.在插件搜索框输入Markdown Preview选择该插件，回车
