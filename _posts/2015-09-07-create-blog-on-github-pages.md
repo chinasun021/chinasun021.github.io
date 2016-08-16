@@ -14,7 +14,7 @@ categories: 技术学习
 ## 0x02 jekyll环境搭建
 由于个人使用的是windows 7 x64位系统，所以这里介绍下jekyll在windows下的安装过程。
 
-###安装ruby
+### 安装ruby
 1. 前往 [http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/)下载rubyinstaller
 2. 选择对应的版本下载，如Ruby 2.2.3 (x64)是适于64位 Windows 机器上的 Ruby 2.1.5 x64 安装包。
 3. 安装下载下来的可执行文件，使用默认安装目录，并勾选“Add Ruby executables to your PATH”
@@ -28,7 +28,7 @@ categories: 技术学习
 
 说明ruby已安装成功
 
-###安装DevKit
+### 安装DevKit
 DevKit 是一个在 Windows 上帮助简化安装及使用 Ruby C/C++ 扩展如 RDiscount 和 RedCloth 的工具箱。
 
 1. 再次前往 [http://rubyinstaller.org/downloads/](http://rubyinstaller.org/downloads/)
@@ -43,7 +43,7 @@ ruby dk.rb init</code></pre>
 6. 执行安装：
 <code>ruby dk.rb install</code>
 
-###安装Jekyll
+### 安装Jekyll
 * 确保gem已经正确安装:
 
 <code>gem -v</code>
@@ -56,11 +56,11 @@ ruby dk.rb init</code></pre>
 
 <code>gem install jekyll</code>
 
-###安装Pygments（非必须）
+### 安装Pygments（非必须）
 Jekyll 里默认的语法高亮插件是 Pygments。 它需要安装 Python 并在网站的配置文件_config.yml 里将 highlighter 的值设置为pygments。
 在windows下安装失败。
 
-###启动Jekyll
+### 启动Jekyll
 执行下面代码，然后访问[http://localhost:4000](http://localhost:4000)，就可以访问刚刚创建好的blog了。
 <pre><code class="markdown">jekyll new myblog
 cd myblog
@@ -113,12 +113,12 @@ description: ""
 
 3.稍等片刻，让 Sublime Text 自动下载安装完成，重启sublime编辑器。
 
-###编辑Markdown文档
+### 编辑Markdown文档
 1.【Ctrl+N】新建一个文档
 
 2.使用Markdown语法编辑文档：【Ctrl+Shift+P】，输入ssm选择Set Syntax:MarkDown后回车
 
-###在浏览器中预览Markdown文档
+### 在浏览器中预览Markdown文档
 
 1.【Ctrl+Shift+P】，输入mp后选择Markdown Preview:Preview in Browser
 
