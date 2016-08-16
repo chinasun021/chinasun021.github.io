@@ -2,7 +2,7 @@
 layout: post
 title: "ubuntu 修改用户名"
 date:   2016-03-08 12:24:40
-categories:
+categories:技术学习
 ---
 Ubuntu下创建的用户如果需要修改用户名，可以通过如下方式执行:
 
