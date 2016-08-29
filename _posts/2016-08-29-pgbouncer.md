@@ -1,25 +1,25 @@
 ---
 layout: post
-title: "pgbouncer°²×°ºÍÊ¹ÓÃ"
+title: "pgbouncerå®‰è£…å’Œä½¿ç”¨"
 date:   2016-08-29 10:37:08
-categories:¼¼ÊõÑ§Ï°
+categories:æŠ€æœ¯å­¦ä¹ 
 ---
-##°²×°
-* ÏµÍ³£ºCentos6.5 x64
-* °²×°libevent£¬yum install libevent libevent-devel
-* ÏÂÔØpgbouncer£¬ÕâÀïÊ¹ÓÃµÄÊÇpgbouncer-1.5.4.tar.gz
-* ½âÑ¹Ëõpgbouncer-1.5.4.tar.gz£¬È»ºóÒÀ´ÎÖ´ĞĞ£º
+##å®‰è£…
+* ç³»ç»Ÿï¼šCentos6.5 x64
+* å®‰è£…libeventï¼Œyum install libevent libevent-devel
+* ä¸‹è½½pgbouncerï¼Œè¿™é‡Œä½¿ç”¨çš„æ˜¯pgbouncer-1.5.4.tar.gz
+* è§£å‹ç¼©pgbouncer-1.5.4.tar.gzï¼Œç„¶åä¾æ¬¡æ‰§è¡Œï¼š
 
 	./configure --prefix=/usr/local/pgbouncer
 	make
 	make install
 
-* ½«pgbouncer¿ÉÖ´ĞĞÎÄ¼ş¼ÓÈíÁ´½Óµ½/usr/binÄ¿Â¼£º
+* å°†pgbouncerå¯æ‰§è¡Œæ–‡ä»¶åŠ è½¯é“¾æ¥åˆ°/usr/binç›®å½•ï¼š
 
 	ln -s /usr/local/pgbouncer/bin/pgbouncer /usr/bin/pgbouncer
 
-##ÅäÖÃ
-* ÔÚ/usr/local/pgbouncerÄ¿Â¼ÏÂĞÂ½¨Ò»¸öÎÄ¼şpgbouncer.ini£¬ÄÚÈİ²Î¿¼ÈçÏÂ£º
+##é…ç½®
+* åœ¨/usr/local/pgbouncerç›®å½•ä¸‹æ–°å»ºä¸€ä¸ªæ–‡ä»¶pgbouncer.iniï¼Œå†…å®¹å‚è€ƒå¦‚ä¸‹ï¼š
 
 	[databases]
 	temp1= host=127.0.0.1 port=5432 dbname=mydb user=postgres password=test
@@ -36,19 +36,19 @@ categories:¼¼ÊõÑ§Ï°
 	max_client_conn = 2000
 	default_pool_size = 60
 
-* ²¢´´½¨Ò»¸öÊÚÈ¨ÎÄ¼ş/usr/local/pgbouncer/user.txt£¨adminÎªpgbouncerÓÃ»§£¬passwordÎªÓÃ»§ÃÜÂë£©
+* å¹¶åˆ›å»ºä¸€ä¸ªæˆæƒæ–‡ä»¶/usr/local/pgbouncer/user.txtï¼ˆadminä¸ºpgbouncerç”¨æˆ·ï¼Œpasswordä¸ºç”¨æˆ·å¯†ç ï¼‰
 
 	"admin" "password"
 
-* ĞÂ½¨Ò»¸öÎÄ¼ş¼Ğ/var/log/pgbouncer£¬È»ºó¶Ô¸ÃÎÄ¼ş¼ĞÊÚÈ¨,chmod 777 -R /var/log/pgbouncer
+* æ–°å»ºä¸€ä¸ªæ–‡ä»¶å¤¹/var/log/pgbouncerï¼Œç„¶åå¯¹è¯¥æ–‡ä»¶å¤¹æˆæƒ,chmod 777 -R /var/log/pgbouncer
 
-##Æô¶¯
-* Æô¶¯pgbouncer£¬ÒÔpostgresÓÃ»§Æô¶¯£¬²»¿ÉÒÔÍ¨¹ırootÓÃ»§Æô¶¯
+##å¯åŠ¨
+* å¯åŠ¨pgbouncerï¼Œä»¥postgresç”¨æˆ·å¯åŠ¨ï¼Œä¸å¯ä»¥é€šè¿‡rootç”¨æˆ·å¯åŠ¨
 
 	[root@wx-srv-test pgbouncer]#pgbouncer -d /usr/local/pgbouncer/pgbouncer.ini -u postgres
 	2016-08-29 09:55:56.374 8685 LOG File descriptor limit: 1024 (H:4096), max_client_conn: 5000, max fds possible: 5410
 
-* µÇÂ¼
+* ç™»å½•
 
-	psql -p 6432 -h 127.0.0.1 -U admin temp1                       //adminÎªpgbouncerÓÃ»§£¬temp1ÎªpgbouncerÅäÖÃµÄÊı¾İ¿â
-	psql -p 6432 -h 127.0.0.1 -U admin pgbouncer                //µÇÂ¼pgbouncerÊı¾İ¿â£¬ÕâÊ±²»Á¬½ÓÊµ¼ÊµÄpostgresqlÊı¾İ¿â£¬¿ÉÒÔ×Ô¼ºÑ¡ÔñĞèÒªÁ¬½ÓµÄÊı¾İ¿â
+	psql -p 6432 -h 127.0.0.1 -U admin temp1                       //adminä¸ºpgbouncerç”¨æˆ·ï¼Œtemp1ä¸ºpgbounceré…ç½®çš„æ•°æ®åº“
+	psql -p 6432 -h 127.0.0.1 -U admin pgbouncer                //ç™»å½•pgbounceræ•°æ®åº“ï¼Œè¿™æ—¶ä¸è¿æ¥å®é™…çš„postgresqlæ•°æ®åº“ï¼Œå¯ä»¥è‡ªå·±é€‰æ‹©éœ€è¦è¿æ¥çš„æ•°æ®åº“
