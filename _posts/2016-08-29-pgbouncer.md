@@ -11,16 +11,16 @@ categories: 技术学习
 * 下载pgbouncer，这里使用的是pgbouncer-1.5.4.tar.gz
 * 解压缩pgbouncer-1.5.4.tar.gz，然后依次执行：
 
-```
+
 	./configure --prefix=/usr/local/pgbouncer
 	make
 	make install
-```
+
 
 * 将pgbouncer可执行文件加软链接到/usr/bin目录：
 
 ```
-	ln -s /usr/local/pgbouncer/bin/pgbouncer /usr/bin/pgbouncer
+ln -s /usr/local/pgbouncer/bin/pgbouncer /usr/bin/pgbouncer
 ```
 
 ## 配置
