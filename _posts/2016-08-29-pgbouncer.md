@@ -4,8 +4,8 @@ title: "pgbouncer安装和使用"
 date:   2016-08-29 10:37:08
 categories: 技术学习
 ---
-test
-##安装
+
+## 安装
 * 系统：Centos6.5 x64
 * 安装libevent，yum install libevent libevent-devel
 * 下载pgbouncer，这里使用的是pgbouncer-1.5.4.tar.gz
@@ -19,7 +19,7 @@ test
 
 	ln -s /usr/local/pgbouncer/bin/pgbouncer /usr/bin/pgbouncer
 
-##配置
+## 配置
 * 在/usr/local/pgbouncer目录下新建一个文件pgbouncer.ini，内容参考如下：
 
 	[databases]
@@ -43,7 +43,7 @@ test
 
 * 新建一个文件夹/var/log/pgbouncer，然后对该文件夹授权,chmod 777 -R /var/log/pgbouncer
 
-##启动
+## 启动
 * 启动pgbouncer，以postgres用户启动，不可以通过root用户启动
 
 	[root@wx-srv-test pgbouncer]#pgbouncer -d /usr/local/pgbouncer/pgbouncer.ini -u postgres
