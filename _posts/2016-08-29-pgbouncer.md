@@ -2,7 +2,7 @@
 layout: post
 title: "pgbouncer安装和使用"
 date:   2016-08-29 10:37:08
-categories:技术
+categories:技术学习
 ---
 ##安装
 * 系统：Centos6.5 x64
